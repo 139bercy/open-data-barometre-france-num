@@ -1,8 +1,14 @@
+import os
+
 import requests
 import json
 import csv
 
-APIKEY=""
+import dotenv
+
+dotenv.load_dotenv()
+
+APIKEY = os.environ["ODS_API_KEY"]
 headers = {"content-type": "application/json", "Authorization": f"Apikey {APIKEY}"}
 
 output_rows = []
